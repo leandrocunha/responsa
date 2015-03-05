@@ -34,7 +34,7 @@
                     <h3 class="title">Simple and real workflows to modern and pixel-perfect apps</h3>
                     <p class="subtitle">But how this works?</p>
 
-                    <ul class="steps"
+                    <ul class="steps">
                         <li>1) Designers can be frameworks-grid free</li>
                         <li>2) Fron-End developers can set customs grid exactly within Photoshop pixel sizes</li>
                         <li>3) After be prepocessed, your custom grid will be all converted to responsive format</li>
