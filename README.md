@@ -13,6 +13,7 @@ But how this works?
 #Example
 
 ##app.styl
+<pre>
 .container
     container(1024px)
 
@@ -23,9 +24,11 @@ But how this works?
 .col-right
     float left
     column(824px, col: 'last')
+</pre>
 
 
 ##app.css
+<pre>
 .container {
     margin: 0 auto;
     max-width: 1024px;
@@ -42,3 +45,4 @@ But how this works?
     max-width: 78.515625%;
     margin-right: 0;
 }
+</pre>
