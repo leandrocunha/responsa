@@ -6,9 +6,9 @@ The grid system to designers free to create and developers free to responsive ea
 #Simple and real workflows to modern and pixel-perfect apps
 But how this works?
 
-1) Designers can be frameworks-grid free
-2) Fron-End developers can set customs grid exactly within Photoshop pixel sizes
-3) After be prepocessed, your custom grid will be all converted to responsive format
+1) Designers can be frameworks-grid free<br />
+2) Fron-End developers can set customs grid exactly within Photoshop pixel sizes<br />
+3) After be prepocessed, your custom grid will be all converted to responsive format<br />
 
 #Example
 
