@@ -1,0 +1,4 @@
+/node_modules/
+*-access_log
+*-error_log
+*.log
