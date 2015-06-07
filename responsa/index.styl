@@ -11,7 +11,7 @@ container(width, pad = responsa.padding)
     width_calc = (width - (pad * 2))
 
     margin 0 auto
-    max-width unit(width, 'px')
+    max-width unit(width_calc, 'px')
     padding 0 pad
 
     &:after
@@ -27,12 +27,17 @@ column(column_width, gutter = responsa.gutter, max-width = responsa.max-width, c
     tt = unit(t, '%')
 
     float left
-    max-width tt
+    width tt
 
-    if (col == false)
-        margin-right responsa_margin(gutter, max-width)
-    else
-        margin-right 0
+cf()
+  *zoom: 1
+
+  &:before, &:after
+    content: ''
+    display: table
+
+  &:after
+    clear: both
 
 calculate(val, gutter, total)
     t = ((val - gutter) * 100) / total
