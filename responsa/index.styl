@@ -1,13 +1,12 @@
 // variabeles
 responsa = {
-  gutter: 20px,
-  max-width: 1024px,
-  padding: 10px
+  gutter: 10px,
+  max-width: 1024px
 }
 
 
 // functions
-container(width, pad = responsa.padding)
+container(width, pad = responsa.gutter)
     width_calc = (width - (pad * 2))
 
     margin 0 auto
@@ -27,6 +26,7 @@ column(column_width, gutter = responsa.gutter, max-width = responsa.max-width, c
     tt = unit(t, '%')
 
     float left
+    padding 0 gutter
     width tt
 
 cf()
@@ -40,7 +40,7 @@ cf()
     clear: both
 
 calculate(val, gutter, total)
-    t = ((val - gutter) * 100) / total
+    t = ((val - (gutter * 2)) * 100) / total
     return t
 
 responsa_margin(gutter, total)
