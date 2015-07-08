@@ -39,6 +39,12 @@ cf()
   &:after
     clear: both
 
+
+row(gutter=responsa.gutter)
+  margin-right gutter - (gutter * 2)
+  margin-left gutter - (gutter * 2)
+
+// helpers
 calculate(val, gutter, total)
     t = ((val - (gutter * 2)) * 100) / total
     return t
