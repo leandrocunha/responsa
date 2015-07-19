@@ -14,35 +14,45 @@ But how this works?
 
 ##app.styl
 <pre>
-.container
+body
+  .container
     container(1024px)
 
-.col-left
-    float left      
-    column(200px)
-    
-.col-right
-    float left
-    column(824px, col: 'last')
+  .row
+    row()
+
+  #m
+    .columns
+      .column-left
+        column(300px, gutter: 10px, 1024px)
+
+      .column-right
+        column(724px, gutter: 10px, 1024px)
 </pre>
 
 
 ##app.css
 <pre>
-.container {
+body .container {
     margin: 0 auto;
     max-width: 1024px;
+    padding: 0 10px;
 }
 
-.container .col-left {
-    float: left;
-    max-width: 17.578125%;
-    margin-right: 1.953125%;
+body .row {
+    margin-right: -10px;
+    margin-left: -10px;
 }
 
-.col-right {
+body #m .columns .column-left {
     float: left;
-    max-width: 78.515625%;
-    margin-right: 0;
+    padding: 0 10px;
+    width: 29.296875%
+}
+
+body #m .columns .column-right {
+    float: left;
+    padding: 0 10px;
+    width: 70.703125%
 }
 </pre>

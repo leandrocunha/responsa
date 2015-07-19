@@ -2,3 +2,18 @@
 @import 'responsa'
 
 global_reset()
+
+body
+  .container
+    container(1024px)
+
+  .row
+    row()
+
+  #m
+    .columns
+      .column-left
+        column(300px, gutter: 10px, 1024px)
+
+      .column-right
+        column(724px, gutter: 10px, 1024px)

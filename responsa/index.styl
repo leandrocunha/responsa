@@ -7,40 +7,56 @@ responsa = {
 
 // functions
 container(width, pad = responsa.gutter)
-    width_calc = (width - (pad * 2))
+    width_calc = (width)
 
+    box-sizing border-box
     margin 0 auto
     max-width unit(width_calc, 'px')
     padding 0 pad
 
     &:after
-        visibility: hidden;
-        display: block;
-        font-size: 0;
-        content: " ";
-        clear: both;
-        height: 0;
+        visibility hidden
+        display block
+        font-size 0
+        content " "
+        clear both
+        height 0
 
 column(column_width, gutter = responsa.gutter, max-width = responsa.max-width, col = false)
-    t = calculate(column_width, gutter, max-width)
+    t = calculate(column_width, max-width)
     tt = unit(t, '%')
 
+    box-sizing border-box
     float left
     padding 0 gutter
     width tt
 
 cf()
-  *zoom: 1
+  *zoom 1
 
-  &:before, &:after
-    content: ''
-    display: table
+  &:before,
+  &:after
+    content " "
+    display table
 
   &:after
-    clear: both
+    clear both
 
-calculate(val, gutter, total)
-    t = ((val - (gutter * 2)) * 100) / total
+row(gutter = responsa.gutter)
+  margin-right gutter - (gutter * 2)
+  margin-left gutter - (gutter * 2)
+
+  &:before,
+  &:after
+    content ' '
+    display table
+
+  &:after
+    clear both
+
+
+calculate(val, total)
+    t = (val * 100) / total
     return t
 
 responsa_margin(gutter, total)

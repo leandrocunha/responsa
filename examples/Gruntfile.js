@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                     banner: '/*\n' +
                             'Responsa\n' +
                             '*/\n',
-                    paths: [ './examples/node_modules/nib', './examples/node_modules/responsa' ],
+                    paths: [ './node_modules/nib', './node_modules/responsa' ],
                     import: [ 'nib', 'responsa' ],
                 },
                 files: {
